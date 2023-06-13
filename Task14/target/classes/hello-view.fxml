@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="678.0" prefWidth="636.0" spacing="20.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task14.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+      <AnchorPane prefHeight="155.0" prefWidth="596.0">
+         <children>
+              <Label fx:id="systemLabel" layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="418.0" textFill="WHITE">
+                  <font>
+                      <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                  </font>
+              </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@horse.png" />
+               </image></ImageView>
+                  <Label layoutX="270.0" layoutY="86.0" prefHeight="26.0" prefWidth="130.0" text="Баланс автомата" textFill="WHITE">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+                      </font>
+                  </Label>
+                  <Label fx:id="machineMoney" layoutX="330.0" layoutY="112.0" text="0" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </Label>
+         </children>
+      </AnchorPane>
+        <HBox fx:id="Chest" prefHeight="150.0" prefWidth="568.0">
+            <children>
+                <ImageView fx:id="Bag1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#OnMouseClick" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+               <image>
+                  <Image url="@coin.png" />
+               </image></ImageView>
+                <ImageView fx:id="Bag2" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#OnMouseClick" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+               <image>
+                  <Image url="@coin.png" />
+               </image></ImageView>
+                <ImageView fx:id="Bag3" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#OnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@coin.png" />
+               </image></ImageView>
+            </children>
+        </HBox>
+          <AnchorPane prefHeight="204.0" prefWidth="596.0">
+              <children>
+                  <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#OnEnd" style="-fx-background-color: gold;" text="Завершить игру!">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                      </font>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnStart" style="-fx-background-color: gold;" text="Начать игру!">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                      </font>
+                  </Button>
+                  <Button layoutX="458.0" layoutY="14.0" mnemonicParsing="false" onAction="#addMoney" style="-fx-background-color: gold;" text="Добавить монет">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                      </font>
+                  </Button>
+                  <Label fx:id="coin" layoutX="310.0" layoutY="13.0" text="Баланс игрока" textFill="#f2f2f2">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+                      </font>
+            </Label>
+                  <Label fx:id="playerMoney" layoutX="356.0" layoutY="48.0" text="0" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </Label>
+                  <Label fx:id="statusLabel" layoutX="40.0" layoutY="81.0" prefHeight="99.0" prefWidth="519.0" text="statusLabel" textFill="WHITE" visible="false">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                      </font>
+                  </Label>
+              </children>
+          </AnchorPane>
+    </children>
+
+
+</VBox>
